@@ -13,9 +13,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        // Custom font functions //
+
+        // Title button font change
         TextView tv=(TextView)findViewById(R.id.mainTitleTV);
         Typeface face=Typeface.createFromAsset(getAssets(),"fonts/AmaticSC-Bold.ttf");
         tv.setTypeface(face);
+
+        // Login button font change
+        TextView lbview=(TextView)findViewById(R.id.login_button);
+        Typeface lbface=Typeface.createFromAsset(getAssets(),"fonts/AmaticSC-Bold.ttf");
+        lbview.setTypeface(lbface);
+
+        // Login button font change
+        TextView rbview=(TextView)findViewById(R.id.register_button);
+        Typeface rbface=Typeface.createFromAsset(getAssets(),"fonts/AmaticSC-Bold.ttf");
+        rbview.setTypeface(rbface);
     }
 
 

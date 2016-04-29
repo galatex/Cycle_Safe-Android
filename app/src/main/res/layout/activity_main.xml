@@ -19,4 +19,41 @@
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bikeImage"
+        android:src="@drawable/bike"
+        android:contentDescription="@string/logo_info"
+        android:layout_below="@+id/mainTitleTV"
+        android:layout_marginTop="-200sp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="230sp"
+        android:minHeight="30sp"
+        android:text="@string/login_name"
+        android:id="@+id/login_button"
+        android:background="#19a662"
+        android:textSize="43sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bikeImage"
+        android:layout_marginTop="-170sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="230sp"
+        android:minHeight="55sp"
+        android:text="@string/register_name"
+        android:id="@+id/register_button"
+        android:background="#19a662"
+        android:textSize="43sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login_button"
+        android:layout_marginTop="15sp"/>
+
 </RelativeLayout>
