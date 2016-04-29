@@ -1,8 +1,10 @@
 package io.galatexlabs.cyclesafe;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         TextView rbview=(TextView)findViewById(R.id.register_button);
         Typeface rbface=Typeface.createFromAsset(getAssets(),"fonts/AmaticSC-Bold.ttf");
         rbview.setTypeface(rbface);
+    }
+    /** Called when the user clicks the Send button */
+    public void onClickRegister(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
 
