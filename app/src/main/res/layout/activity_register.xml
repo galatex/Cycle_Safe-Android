@@ -78,12 +78,11 @@
         android:minWidth="230sp"
         android:minHeight="55sp"
         android:text="@string/register_name"
-        android:id="@+id/registersubmit_button"
+        android:id="@+id/btnRegister"
         android:background="#19a662"
         android:textSize="43sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/editPasswordVerifyText"
-        android:layout_marginTop="30sp"
-        android:onClick="onClickRegisterSubmit" />
+        android:layout_marginTop="30sp" />
 
 </RelativeLayout>

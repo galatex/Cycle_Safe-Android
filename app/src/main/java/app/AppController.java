@@ -1,4 +1,4 @@
-package info.androidhive.loginandregistration.app;
+package app;
 
 import android.app.Application;
 import android.text.TextUtils;
