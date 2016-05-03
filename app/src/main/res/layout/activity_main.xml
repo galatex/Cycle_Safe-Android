@@ -41,7 +41,7 @@
         android:textSize="43sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/bikeImage"
-        android:layout_marginTop="-170sp"
+        android:layout_marginTop="-180sp"
         android:onClick="onClickLogin"/>
 
     <Button
@@ -58,13 +58,28 @@
         android:layout_marginTop="15sp"
         android:onClick="onClickRegister" />
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fbLoginButton"
+        android:layout_width="230sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/register_button" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Logout"
         android:id="@+id/btnLogout"
-        android:layout_below="@+id/register_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:layout_alignTop="@+id/bikeImage"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

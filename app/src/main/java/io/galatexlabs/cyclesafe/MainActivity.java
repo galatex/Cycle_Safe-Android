@@ -8,25 +8,43 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 
 import helper.SQLiteHandler;
 import helper.SessionManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "debug";
+
     private Button btnLogout;
+    private LoginButton loginButton;
 
     private SQLiteHandler db;
     private SessionManager session;
+
+    CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
+
         setContentView(R.layout.activity_main);
+
+
+        loginButton = (LoginButton)findViewById(R.id.fbLoginButton);
+
+        // CallbackManager for FB
+        callbackManager = CallbackManager.Factory.create();
+
 
         btnLogout = (Button) findViewById(R.id.btnLogout);
 
@@ -62,6 +80,28 @@ public class MainActivity extends AppCompatActivity {
         Typeface rbface=Typeface.createFromAsset(getAssets(),"fonts/AmaticSC-Bold.ttf");
         rbview.setTypeface(rbface);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+    private FacebookCallback<LoginResult> mCallBack = new FacebookCallback<LoginResult>() {
+        @Override
+        public void onSuccess(LoginResult loginResult) {
+        }
+
+        @Override
+        public void onCancel() {
+        }
+
+        @Override
+        public void onError(FacebookException e) {
+        }
+    };
+
     /** Called when the user clicks the Register button */
     public void onClickRegister(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
