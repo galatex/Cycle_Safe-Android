@@ -8,19 +8,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
 import helper.SQLiteHandler;
 import helper.SessionManager;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnLogout;
-    
+
     private SQLiteHandler db;
     private SessionManager session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
 
         btnLogout = (Button) findViewById(R.id.btnLogout);
