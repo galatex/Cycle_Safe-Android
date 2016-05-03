@@ -2,6 +2,7 @@
     <string name="app_name">Cycle Safe</string>
     <string name="login_name">LOGIN</string>
     <string name="register_name">REGISTER</string>
+    <string name="not_registered">Not registered?</string>
     <string name="logo_info">bike logo</string>
     <string name="name">Name</string>
     <string name="email">Email</string>

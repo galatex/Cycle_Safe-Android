@@ -41,7 +41,8 @@
         android:textSize="43sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/bikeImage"
-        android:layout_marginTop="-170sp"/>
+        android:layout_marginTop="-170sp"
+        android:onClick="onClickLogin"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -56,5 +57,14 @@
         android:layout_below="@+id/login_button"
         android:layout_marginTop="15sp"
         android:onClick="onClickRegister" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Logout"
+        android:id="@+id/btnLogout"
+        android:layout_below="@+id/register_button"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
